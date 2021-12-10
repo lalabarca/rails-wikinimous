@@ -1,0 +1,9 @@
+<ul>
+  <li><%= link_to "Edit article", edit_article_path %></li>
+  <li><%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do %>
+  <i class="fas fa-trash-alt"></i> Delete
+  <% end %></li>
+</ul>
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+<%= link_to "Back", articles_path %>
